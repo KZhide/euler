@@ -1,0 +1,304 @@
+
+==================== FINAL INTERFACE ====================
+2017-03-31 04:39:09.852621 UTC
+
+interface p041-0.1.0.0-IJLXMQnhzPiIO01BL5iGZT:Primes 8002
+  interface hash: b3a80e43ae4b8f4fe51c58cafd571d8d
+  ABI hash: 74483ea5ff1aac65e7ced3183b1f3618
+  export-list hash: e0cbf7c3da8ca4a5e0506b5f58c82e3c
+  orphan hash: 2c0898010063968c8f23df4bf9de3819
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Primes.divisors
+  Primes.isPrime
+  Primes.primeFactors
+  Primes.primes
+  Primes.primesUnder
+  Primes.sumOfDivisors
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Control.Arrow 70754b538e7d75521cd68162917b6946
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:Data.Traversable 556020d7cf3c4a34a774600512918a37
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Float 33e2b9ffe427edd6a5c2fd6a3b26703c
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+108434520dd2375c16ebc0f00d9ff5e5
+  $sproduct :: [GHC.Integer.Type.Integer] -> GHC.Integer.Type.Integer
+  {- Arity: 1, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (GHC.List.foldl
+                   @ GHC.Integer.Type.Integer
+                   @ GHC.Integer.Type.Integer
+                   GHC.Integer.Type.timesInteger
+                   (GHC.Num.$fNumInteger_$cfromInteger 1)) -}
+246bbf90964c3943372943cda0c45a20
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Primes.$trModule2
+                   Primes.$trModule1) -}
+72b0254a6ff6ce946d243654bd6edfe0
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Primes"#) -}
+699c5b78af2b5941db977eac5def5e4b
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "p041-0.1.0.0-IJLXMQnhzPiIO01BL5iGZT"#) -}
+dc265864b2b62b884cca95cc2f99f7a8
+  $wdivisors ::
+    GHC.Integer.Type.Integer
+    -> GHC.Prim.Int# -> [GHC.Integer.Type.Integer]
+  {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Integer.Type.Integer)
+                   (ww1 :: GHC.Prim.Int#) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># 0# ww1) of wild {
+                   GHC.Types.False
+                   -> letrec {
+                        go2 :: GHC.Prim.Int# -> [GHC.Integer.Type.Integer]
+                          {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x :: GHC.Prim.Int#) ->
+                          GHC.Types.:
+                            @ GHC.Integer.Type.Integer
+                            (case GHC.Prim.tagToEnum#
+                                    @ GHC.Types.Bool
+                                    (GHC.Prim.<# x 0#) of wild1 {
+                               GHC.Types.False
+                               -> case x of wild2 {
+                                    DEFAULT -> GHC.Real.$wf ww wild2 0# -> GHC.Real.$fEnumRatio1 }
+                               GHC.Types.True -> GHC.Real.^1 })
+                            (case GHC.Prim.tagToEnum#
+                                    @ GHC.Types.Bool
+                                    (GHC.Prim.==# x ww1) of wild1 {
+                               GHC.Types.False -> go2 (GHC.Prim.+# x 1#)
+                               GHC.Types.True -> GHC.Types.[] @ GHC.Integer.Type.Integer })
+                      } in
+                      go2 0#
+                   GHC.Types.True -> GHC.Types.[] @ GHC.Integer.Type.Integer }) -}
+290d06281b7e9fefd1fdc16524a8d8b1
+  divisors :: GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (x :: GHC.Integer.Type.Integer) ->
+                 GHC.Base.map
+                   @ [GHC.Integer.Type.Integer]
+                   @ GHC.Integer.Type.Integer
+                   Primes.$sproduct
+                   (Primes.divisors_go
+                      (GHC.Base.map
+                         @ (GHC.Integer.Type.Integer, GHC.Types.Int)
+                         @ [GHC.Integer.Type.Integer]
+                         Primes.divisors1
+                         (Primes.primeFactors x)))) -}
+693254d1137aab0b35da6370fd76ea29
+  divisors1 ::
+    (GHC.Integer.Type.Integer, GHC.Types.Int)
+    -> [GHC.Integer.Type.Integer]
+  {- Arity: 1, Strictness: <S(LS(S)),1*U(U,1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: (GHC.Integer.Type.Integer, GHC.Types.Int)) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww2 of ww3 { GHC.Types.I# ww4 ->
+                 Primes.$wdivisors ww1 ww4 } }) -}
+267f185f948af006f007ce83ae2b3a90
+  divisors_go ::
+    [[GHC.Integer.Type.Integer]] -> [[GHC.Integer.Type.Integer]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+32c72bf418c9f0b9fe4c0462ff1f429a
+  isPrime :: GHC.Real.Integral a => a -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <S(LSLLLLLLL),U(U,1*U,A,A,A,C(C1(U)),A,A,1*C1(U))><L,U>,
+     Unfolding: (\ @ a ($dIntegral :: GHC.Real.Integral a) (eta :: a) ->
+                 let {
+                   $dReal :: GHC.Real.Real a = GHC.Real.$p1Integral @ a $dIntegral
+                 } in
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Real @ a $dReal
+                 } in
+                 let {
+                   $dOrd :: GHC.Classes.Ord a = GHC.Real.$p2Real @ a $dReal
+                 } in
+                 let {
+                   lvl1 :: a = GHC.Num.fromInteger @ a $dNum Primes.isPrime2
+                 } in
+                 let {
+                   $dEq :: GHC.Classes.Eq a = GHC.Classes.$p1Ord @ a $dOrd
+                 } in
+                 letrec {
+                   go2 :: [a] -> Data.Monoid.All {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [a]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.True `cast` (Sym (Data.Monoid.N:All[0]))
+                       : y ys
+                       -> case GHC.Classes./=
+                                 @ a
+                                 $dEq
+                                 (GHC.Real.mod @ a $dIntegral eta y)
+                                 lvl1 of wild1 {
+                            GHC.Types.False
+                            -> GHC.Types.False `cast` (Sym (Data.Monoid.N:All[0]))
+                            GHC.Types.True -> go2 ys } }
+                 } in
+                 let {
+                   $dEnum :: GHC.Enum.Enum a = GHC.Real.$p2Integral @ a $dIntegral
+                 } in
+                 (go2
+                    (Primes.sieve'
+                       @ a
+                       $dNum
+                       $dEnum
+                       $dOrd
+                       (GHC.Enum.enumFromTo
+                          @ a
+                          $dEnum
+                          (GHC.Num.fromInteger @ a $dNum Primes.primes2)
+                          (case GHC.Integer.Type.doubleFromInteger
+                                  (GHC.Real.toInteger @ a $dIntegral eta) of wild { DEFAULT ->
+                           case GHC.Float.$w$cproperFraction
+                                  @ a
+                                  $dIntegral
+                                  (GHC.Prim.sqrtDouble# wild) of ww2 { (#,#) ww3 ww4 ->
+                           case ww4 of wild1 { GHC.Types.D# x ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<## x 0.0##) of wild2 {
+                             GHC.Types.False -> ww3
+                             GHC.Types.True
+                             -> GHC.Num.-
+                                  @ a
+                                  $dNum
+                                  ww3
+                                  (GHC.Num.fromInteger @ a $dNum Primes.isPrime1) } } } }))))
+                   `cast`
+                 (Data.Monoid.N:All[0])) -}
+f284c8b885f06a6fd0030c225ddf45ec
+  isPrime1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+6ef4d424d4bff694aac1375a0becc501
+  isPrime2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+9042668baf3a6d247d80a214a5be588b
+  primeFactors ::
+    GHC.Integer.Type.Integer
+    -> [(GHC.Integer.Type.Integer, GHC.Types.Int)]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (x :: GHC.Integer.Type.Integer) ->
+                 GHC.Base.map
+                   @ [GHC.Integer.Type.Integer]
+                   @ (GHC.Integer.Type.Integer, GHC.Types.Int)
+                   Primes.primeFactors1
+                   (Data.OldList.groupBy
+                      @ GHC.Integer.Type.Integer
+                      GHC.Integer.Type.eqInteger
+                      (Primes.primeFactors_f Primes.primes x))) -}
+439beb071de6e7c264a016c3ade7d9b8
+  primeFactors1 ::
+    [GHC.Integer.Type.Integer]
+    -> (GHC.Integer.Type.Integer, GHC.Types.Int)
+  {- Arity: 1, Strictness: <L,U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: [GHC.Integer.Type.Integer]) ->
+                 (GHC.List.head @ GHC.Integer.Type.Integer x,
+                  case GHC.List.$wlenAcc
+                         @ GHC.Integer.Type.Integer
+                         x
+                         0# of ww2 { DEFAULT ->
+                  GHC.Types.I# ww2 })) -}
+5eae84de60d87a1cf961d0833d0e52a0
+  primeFactors_f ::
+    [GHC.Integer.Type.Integer]
+    -> GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+5339491f5db65f59846b9a07dbfcfd39
+  primes :: [GHC.Integer.Type.Integer]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Integer.Type.Integer
+                   Primes.primes2
+                   Primes.primes1) -}
+5232f7866b29f2e203896ab78db21ae4
+  primes1 :: [GHC.Integer.Type.Integer]
+  {- Unfolding: (case GHC.Enum.$wenumDeltaInteger
+                        Primes.primes3
+                        Primes.primes2 of ww { (#,#) ww1 ww2 ->
+                 Primes.primes_sieve'
+                   (GHC.Types.: @ GHC.Integer.Type.Integer ww1 ww2) }) -}
+0aa51f39500d12c8bbdd0d5a6c8bc0bf
+  primes2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+3a6e52af1429ca518927fe5d9e421e2b
+  primes3 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (3) -}
+8c5bb254b84bdcd8a54966030b5bd540
+  primesUnder ::
+    (GHC.Classes.Ord t, GHC.Enum.Enum t, GHC.Num.Num t) => t -> [t]
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)),C(C1(U)),A,A,A,A,A)><S(LLLLLLC(C(S))L),U(A,A,A,A,A,C(C1(U)),1*C1(C1(U)),A)><L,U(C(C1(U)),A,C(C1(U)),A,A,A,C(U))><L,U>,
+     Unfolding: (\ @ t
+                   ($dOrd :: GHC.Classes.Ord t)
+                   ($dEnum :: GHC.Enum.Enum t)
+                   ($dNum :: GHC.Num.Num t)
+                   (n :: t) ->
+                 Primes.sieve'
+                   @ t
+                   $dNum
+                   $dEnum
+                   $dOrd
+                   (GHC.Enum.enumFromTo
+                      @ t
+                      $dEnum
+                      (GHC.Num.fromInteger @ t $dNum Primes.primes2)
+                      n)) -}
+afba86dd575666e464ef9a6d757f806b
+  primes_sieve' ::
+    [GHC.Integer.Type.Integer] -> [GHC.Integer.Type.Integer]
+  {- Arity: 1, Strictness: <S,1*U> -}
+b7ca3d0006cd7d6e56187eefda03d562
+  sieve' ::
+    (GHC.Num.Num t, GHC.Enum.Enum t, GHC.Classes.Ord t) => [t] -> [t]
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,C(U))><L,U(A,A,A,A,A,C(C1(U)),A,A)><L,U(A,C(C1(U)),C(C1(U)),A,A,A,A,A)><S,1*U> -}
+73cff30dc1f741ed6a227290cf73baa0
+  sumOfDivisors ::
+    GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (x :: GHC.Integer.Type.Integer) ->
+                 Primes.sumOfDivisors_go (Primes.primeFactors x) Primes.isPrime1) -}
+c544e858d308570448975d09df4d6cd0
+  sumOfDivisors_go ::
+    [(GHC.Integer.Type.Integer, GHC.Types.Int)]
+    -> GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+"SPEC/Primes product @ Integer" [ALWAYS] forall ($dNum :: GHC.Num.Num
+                                                            GHC.Integer.Type.Integer)
+  GHC.List.product @ GHC.Integer.Type.Integer $dNum
+  = Primes.$sproduct
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

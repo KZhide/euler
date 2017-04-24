@@ -1,0 +1,146 @@
+
+==================== FINAL INTERFACE ====================
+2017-03-31 03:01:26.948393 UTC
+
+interface p041-0.1.0.0-IJLXMQnhzPiIO01BL5iGZT:Digits 8002
+  interface hash: 71e6ff5958dce50fdf1d72fcf15e7da9
+  ABI hash: 5b664626cb9d61d1cbbf2b9b50ad71d6
+  export-list hash: 3104fc7a246a933c88c0609eb9a37ca6
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Digits.digits
+  Digits.digitsWithBase
+  Digits.toNum
+  Digits.toNumWithBase
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+35a009895d8f7301dd0501300863f2bc
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Digits.$trModule2
+                   Digits.$trModule1) -}
+ea9b865ca8bce4b0a9ec5a2e9eb293f6
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Digits"#) -}
+e28174b33f036055b8368c349f330757
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "p041-0.1.0.0-IJLXMQnhzPiIO01BL5iGZT"#) -}
+2c5bbb828efc26d2502b88c35e54f908
+  $wdigitsWithBase ::
+    GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer
+    -> (# GHC.Integer.Type.Integer, [GHC.Integer.Type.Integer] #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0] -}
+14b889d6e22c1d0e43b51c65cc8270ac
+  digits :: GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
+  {- Arity: 1, Strictness: <S,U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Integer.Type.Integer) ->
+                 Digits.digits_digitsWithBase Digits.digits1 eta) -}
+52734e20776d09bcb8ad851be5e1cce0
+  digits1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (10) -}
+64b01620d4b3b44d880f1bcfe4aca666
+  digitsWithBase :: GHC.Real.Integral t => t -> t -> [t]
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLLLLLL),U(1*U,A,A,A,C(C1(U)),C(C1(U)),A,A,A)><L,U><L,U>,
+     Unfolding: (\ @ t
+                   ($dIntegral :: GHC.Real.Integral t)
+                   (eta :: t)
+                   (eta1 :: t) ->
+                 let {
+                   $dOrd :: GHC.Real.Real t = GHC.Real.$p1Integral @ t $dIntegral
+                 } in
+                 let {
+                   $dOrd1 :: GHC.Classes.Ord t = GHC.Real.$p2Real @ t $dOrd
+                 } in
+                 letrec {
+                   digitsWithBase1 :: t -> t -> [t]
+                     {- Arity: 2, Strictness: <L,U><L,U> -}
+                   = \ (b :: t) (n :: t) ->
+                     case GHC.Classes.< @ t $dOrd1 n b of wild {
+                       GHC.Types.False
+                       -> GHC.Types.:
+                            @ t
+                            (GHC.Real.mod @ t $dIntegral n b)
+                            (digitsWithBase1 b (GHC.Real.div @ t $dIntegral n b))
+                       GHC.Types.True -> GHC.Types.: @ t n (GHC.Types.[] @ t) }
+                 } in
+                 digitsWithBase1 eta eta1) -}
+063c2abb328edb14475cea144aad3fee
+  digits_digitsWithBase ::
+    GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
+  {- Arity: 2, Strictness: <S,U><S,U>m2, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Integer.Type.Integer)
+                   (w1 :: GHC.Integer.Type.Integer) ->
+                 case Digits.$wdigitsWithBase w w1 of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ GHC.Integer.Type.Integer ww1 ww2 }) -}
+3ef3809aa5ad9a61012a2a8e58857891
+  toNum :: [GHC.Integer.Type.Integer] -> GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: [GHC.Integer.Type.Integer]) ->
+                 Digits.toNum_toNumWithBase Digits.digits1 eta) -}
+615bdbffcd49f7af2afc298b3460d2a6
+  toNumWithBase :: GHC.Num.Num t => t -> [t] -> t
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,U(C(C1(U)),A,C(C1(U)),A,A,A,1*C1(U))><L,U><S,1*U>,
+     Unfolding: (\ @ t
+                   ($dNum :: GHC.Num.Num t)
+                   (eta :: t)
+                   (eta1 :: [t]) ->
+                 let {
+                   lvl :: t = GHC.Num.fromInteger @ t $dNum Digits.toNumWithBase1
+                 } in
+                 letrec {
+                   toNumWithBase2 :: t -> [t] -> t
+                     {- Arity: 2, Strictness: <L,U><S,1*U> -}
+                   = \ (b :: t) (ds :: [t]) ->
+                     case ds of wild {
+                       [] -> lvl
+                       : x xs
+                       -> GHC.Num.+
+                            @ t
+                            $dNum
+                            x
+                            (GHC.Num.* @ t $dNum b (toNumWithBase2 b xs)) }
+                 } in
+                 toNumWithBase2 eta eta1) -}
+9e6cca0a2ee3cbd48b48acb7a450b4d8
+  toNumWithBase1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+30f4b64e14c805b77fdb19f09f8d1b23
+  toNum_toNumWithBase ::
+    GHC.Integer.Type.Integer
+    -> [GHC.Integer.Type.Integer] -> GHC.Integer.Type.Integer
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
